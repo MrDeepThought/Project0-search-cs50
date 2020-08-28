@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=deivce-width, intial-scale=1.0">
+        <link rel="stylesheet" href="css/master.css">
+        <title>Google</title>
+    </head>
+
+    <body>
+        <!-- IDEA: normal google search result and I'm feeling Lucky result -->
+        <div class="site-container">
+            <div class="header">
+                <div><a href="images.html">Images</a></div>
+                <div><a href="advanced.html">Advanced</a></div>
+            </div>
+            <!-- IDEA: flex container -->
+            <div class="section">
+                <!-- IDEA: flex item -->
+                <!-- IDEA: grid container -->
+                <div class="search-area-1">
+                    <!-- IDEA: grid item-1 -->
+                    <div class="google-logo">
+                        <img src="imgs/google-logo.png" alt="Google Logo">
+                    </div>
+                    <!-- IDEA: grid item-2 -->
+                    <form id="search-form" action="https://google.com/search">
+                        <div class="search-bar">
+                            <img id="search-icon-1" src="imgs/search-glass-icon-1.png"
+                                alt="magnifying glass">
+                            <input id="query" type="text" name="q">
+                            <img id="mic-icon" src="imgs/mic-icon.png" alt="mic icon">
+                        </div>
+                        <input type="submit" value="Google Search">
+                        <input type="button" value="I'm Feeling Lucky"
+                            onclick="open_url()">
+                    </form>
+                    <!-- IDEA: javascript for using i'm feeling lucky button -->
+                    <script type="text/javascript">
+                        function open_url()
+                        {
+                            var baseURL = "https://www.google.com/search?"
+                            var q = document.getElementById("query").value
+                            q = q.replace(/ /g, "+")
+                            q = "q=" + q
+                            var q2 = "btnI=I'm Feeling Lucky"
+                            q2 = q2.replace(/ /g, "+")
+                            var searchURL = baseURL + q + "&" + q2
+                            window.open(searchURL, "_self")
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="footer-1">
+                <div>India</div>
+            </div>
+            <div class="footer-2">
+                <!-- IDEA: make this a grid container -->
+                <div class="left"><a
+                        href="https://ads.google.com/intl/en_in/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                </div>
+                <div class="left"><a
+                        href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                </div>
+                <div class="left"><a
+                        href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                </div>
+                <div class="left"><a
+                        href="https://google.com/search/howsearchworks/?fg=1">How Search
+                        Works</a></div>
+                <div class="center">
+                </div>
+                <div class="right"><a
+                        href="https://www.google.com/preferences?hl=en">Settings</a></div>
+                <div class="right"><a
+                        href="https://policies.google.com/terms?fg=1">Terms</a></div>
+                <div class="right"><a
+                        href="https://policies.google.com/privacy?fg=1">Privacy</a></div>
+            </div>
+        </div>
+    </body>
+
+</html>
