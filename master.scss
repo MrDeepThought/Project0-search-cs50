@@ -262,7 +262,7 @@ body{
             @extend %search-button;
             margin-top: 35px;
             margin-left: 155px;
-            visibility: hidden;
+            visibility: visible;
         }
 
         input[type=submit]:hover{
